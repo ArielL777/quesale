@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+      <meta charset="utf-8"/>
+      <meta charset="utf-8"/>
+      <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+      <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" onload="this.rel='stylesheet'" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+      <title>QueSale - Descubrí eventos únicos</title>
+      <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <style type="text/tailwindcss">
+         :root {
+         --primary-color: #7453be;--secondary-color: #f5f3f7;
+         --text-primary: #141118;
+         --text-secondary: #756189;
+         }
+         .event-card:hover .chat-preview {
+         opacity: 1;
+         transform: translateY(0);
+         }
+
+      </style>
+   </head>
+   <body class="bg-white text-gray-900" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+         <div class="layout-container flex h-full grow flex-col">
+            <header class="sticky top-0 z-20 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-gray-200 bg-white/80 px-10 py-4 backdrop-blur-sm">
+               <div class="flex items-center gap-10">
+                  <div class="flex items-center gap-3 text-[var(--primary-color)]">
+                     <img src="img/logo.jfif" alt="QueSale Logo" class="h-12 w-12 object-cover rounded-full" />
+                  </div>
+                  <nav class="hidden md:flex items-center gap-6">
+                     <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Explorar</a>
+                     <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Categorías</a>
+                     <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Crear Evento</a>
+                  </nav>
+               </div>
+               <div class="flex flex-1 items-center justify-end gap-4">
+                  <label class="relative hidden sm:block w-full max-w-xs">
+                  <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"> search </span>
+                  <input class="form-input w-full rounded-full border-gray-200 bg-[var(--secondary-color)] py-2 pl-10 pr-4 text-sm text-[var(--text-primary)] transition placeholder:text-gray-400 focus:border-lilac-500 focus:ring-lilac-500" placeholder="Buscar eventos..." value=""/>
+                  </label>
+                  <div class="flex items-center gap-2">
+                     <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Mi Perfil</a>
+                     <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-6 bg-[var(--primary-color)] text-white text-sm font-bold shadow-lg shadow-lilac-500/20 transition-all hover:bg-[#B695B6] hover:shadow-lilac-500/40">
+                     <span class="truncate">Login</span>
+                     </button>
+                  </div>
+               </div>
+            </header>
+
+    <!-- PRESENTACION -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="relative w-full h-[500px] rounded-2xl overflow-hidden group mb-16">
+        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-in-out group-hover:scale-105" style='background-image: url("https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1400&q=80");'></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+        <div class="relative h-full flex flex-col items-center justify-center text-center text-white p-8">
+          <h1 class="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight drop-shadow-lg">
+            Descubrí los mejores eventos,<br/> cerca tuyo.
+          </h1>
+          <p class="mt-4 max-w-2xl text-lg text-gray-200 drop-shadow-md">
+            Eventos únicos y auténticos. Descubrí nuevas experiencias hechas para vos.
+          </p>
+          <button class="mt-8 flex items-center gap-2 min-w-[84px] justify-center rounded-full h-12 px-8 bg-[var(--primary-color)] text-white text-base font-bold shadow-lg shadow-violet-500/30 hover:bg-violet-700 hover:shadow-violet-500/50">
+            <span class="material-symbols-outlined"> location_on </span>
+            Descubrir eventos cerca de mí
+          </button>
+        </div>
+      </div>
+
+
+            <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+               <section class="mb-16">
+                  <div class="flex justify-between items-center mb-6">
+                    <button class="px-6 py-2 rounded-full bg-violet-600 text-white font-semibold shadow-md cursor-default">
+  ✨ Eventos Destacados
+</button>
+                     <a class="text-sm font-medium text-[var(--primary-color)] hover:text-[#B695B6] transition-colors" href="#">Ver todos</a>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <div class="bg-white rounded-2xl shadow-md overflow-hidden group event-card transition-all hover:shadow-xl hover:-translate-y-1 border border-gray-100">
+                        <div class="relative">
+                           <div class="h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD4XKUtwutQ1v8Qjak_q7QvI5kxGheW2KHD6ZLnGtbsO3sxz3FFf4jYX0irypxGBHJ-Y7xIc5H8Kvgv9fEeKy_8oDY1opTSjs-LyhxetqHCNRr6Q5U8qS_VJo68XiEoMJv35IQgcYgqisnF-aCvo_ahLLUETfurt2ikuvYD8Gwy8Uz00E27gvV10szuYmby0QNs8ScF2pBcNY9sTJ75U0XCBtLbiTAODayL1rNPjCswhfVjruN4SjolfE0aZfvUCpZ5Q-GHwhJ3yiEs");'></div>
+                           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                              <h3 class="text-white text-lg font-bold">Convención de Anime en Buenos Aires</h3>
+                           </div>
+                        </div>
+                        <div class="p-4">
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-2">
+                              <span class="material-symbols-outlined text-base mr-2"> calendar_today </span>
+                              <p>Sábado, 15 de Julio, 10:00 AM</p>
+                           </div>
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-4">
+                              <span class="material-symbols-outlined text-base mr-2"> location_on </span>
+                              <p>Centro de Convenciones, Buenos Aires</p>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <span class="text-xs font-semibold bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Anime</span>
+                              <span class="text-xs font-semibold bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Cosplay</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bg-white rounded-2xl shadow-md overflow-hidden group event-card transition-all hover:shadow-xl hover:-translate-y-1 border border-gray-100">
+                        <div class="relative">
+                           <div class="h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAYFkOWjnNSxZSCX28-GeOQ-F1s8EbZ07WqROjHM7DtDrhzeaXkkc5rmU-XWjigAzFH0YHg11bKHqsf8Oi7VTx5EOJvFbJy9y4QvIIjb2_c-eNoQquVcGzm8-W99oYf8j1-qbemm1f3cUYKJ7S_5JX704k1rKhcKey24GVo-lIps2GoxR8nkH_hblWsL4JodJS4QciSS0KCOsSnTcnpRU-c179eH_MF77HZnx3EhG29v95AuElDr0khYxLHqQa5oyCO9pwG0ZxzYS7m");'></div>
+                           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                              <h3 class="text-white text-lg font-bold">Reunión de K-Pop en Parque Centenario</h3>
+                           </div>
+                        </div>
+                        <div class="p-4">
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-2">
+                              <span class="material-symbols-outlined text-base mr-2"> calendar_today </span>
+                              <p>Domingo, 16 de Julio, 2:00 PM</p>
+                           </div>
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-4">
+                              <span class="material-symbols-outlined text-base mr-2"> location_on </span>
+                              <p>Parque Centenario, Buenos Aires</p>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <span class="text-xs font-semibold bg-pink-100 text-pink-700 px-2 py-1 rounded-full">K-Pop</span>
+                              <span class="text-xs font-semibold bg-green-100 text-green-700 px-2 py-1 rounded-full">Gratis</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bg-white rounded-2xl shadow-md overflow-hidden group event-card transition-all hover:shadow-xl hover:-translate-y-1 border border-gray-100">
+                        <div class="relative">
+                           <div class="h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMBaRM3tSmuhjDVSLSHbsgU3IjqcKGUvLIQoJUUawiMaDL9X-OaFA09cAsE2WeJ0RH3KPuM5i6eD_SGH_NNYCF47WwVNqdqs-UdgjLtBNEer68iqw4D0fPIrn0ucXAip-QVrMCcdNbFD75QK8qoXyEw7UEX9pP3CEEtUckVV8PRcN5tfhWeyITIDO2wBqGvovnB7U__6KvjD7ckpyt1CHb-vqMgUFs7SVJGSBK9N98N1VokvtM0dhPehNNi7zlmiBs5UqoR6tHv2XB");'></div>
+                           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                              <h3 class="text-white text-lg font-bold">Torneo de Videojuegos en Palermo</h3>
+                           </div>
+                        </div>
+                        <div class="p-4">
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-2">
+                              <span class="material-symbols-outlined text-base mr-2"> calendar_today </span>
+                              <p>Sábado, 22 de Julio, 1:00 PM</p>
+                           </div>
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-4">
+                              <span class="material-symbols-outlined text-base mr-2"> location_on </span>
+                              <p>Espacio Gamer, Palermo, Buenos Aires</p>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <span class="text-xs font-semibold bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Gaming</span>
+                              <span class="text-xs font-semibold bg-orange-100 text-orange-700 px-2 py-1 rounded-full">Competencia</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section class="mb-16">
+                  <div class="flex justify-between items-center mb-6">
+                     <button class="px-6 py-2 rounded-full bg-violet-500 text-white font-semibold shadow-md cursor-default">
+  🎯 Eventos Para Ti
+</button>
+                     <a class="text-sm font-medium text-[var(--primary-color)] hover:text-[#B695B6] transition-colors" href="#">Ver todos</a>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <div class="bg-white rounded-2xl shadow-md overflow-hidden group event-card transition-all hover:shadow-xl hover:-translate-y-1 border border-gray-100">
+                        <div class="relative">
+                           <div class="h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs2qSuzeiaD78_l2bfsJYva_jWabdo2hgrBKIAgOjhx7LBpwnLMqxqFIAK9thR-09dEYD_flmpnsRKnjDuN8R3C-Zk1pFASvFEyhwdqzyOqv121ykXMNGG8Sc006xRuEmJkipbANepv1yQmrBCoPpAxdXJtp-NLShxg4ZSrZun_yfWtffDStAxxevYmalYYSxmnpLMIlI7x8IQso3OX7lmqK4u1OBq91m-CLFdkB-G7qp1R8ZT4Xr34V_tVN7nuyfZwLf5vXd7XWOb");'></div>
+                           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                              <h3 class="text-white text-lg font-bold">Juntada de Dibujo al Aire Libre</h3>
+                           </div>
+                        </div>
+                        <div class="p-4">
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-2">
+                              <span class="material-symbols-outlined text-base mr-2"> calendar_today </span>
+                              <p>Domingo, 23 de Julio, 3:00 PM</p>
+                           </div>
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-4">
+                              <span class="material-symbols-outlined text-base mr-2"> location_on </span>
+                              <p>Rosedal de Palermo, Buenos Aires</p>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <span class="text-xs font-semibold bg-green-100 text-green-700 px-2 py-1 rounded-full">Arte</span>
+                              <span class="text-xs font-semibold bg-green-100 text-green-700 px-2 py-1 rounded-full">Gratis</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bg-white rounded-2xl shadow-md overflow-hidden group event-card transition-all hover:shadow-xl hover:-translate-y-1 border border-gray-100">
+                        <div class="relative">
+                           <div class="h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs2qSuzeiaD78_l2bfsJYva_jWabdo2hgrBKIAgOjhx7LBpwnLMqxqFIAK9thR-09dEYD_flmpnsRKnjDuN8R3C-Zk1pFASvFEyhwdqzyOqv121ykXMNGG8Sc006xRuEmJkipbANepv1yQmrBCoPpAxdXJtp-NLShxg4ZSrZun_yfWtffDStAxxevYmalYYSxmnpLMIlI7x8IQso3OX7lmqK4u1OBq91m-CLFdkB-G7qp1R8ZT4Xr34V_tVN7nuyfZwLf5vXd7XWOb");'></div>
+                           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                              <h3 class="text-white text-lg font-bold">Feria de Comics y Manga</h3>
+                           </div>
+                        </div>
+                        <div class="p-4">
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-2">
+                              <span class="material-symbols-outlined text-base mr-2"> calendar_today </span>
+                              <p>Sábado, 29 de Julio, 12:00 PM</p>
+                           </div>
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-4">
+                              <span class="material-symbols-outlined text-base mr-2"> location_on </span>
+                              <p>La Rural, Buenos Aires</p>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <span class="text-xs font-semibold bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Comics</span>
+                              <span class="text-xs font-semibold bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Manga</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bg-white rounded-2xl shadow-md overflow-hidden group event-card transition-all hover:shadow-xl hover:-translate-y-1 border border-gray-100">
+                        <div class="relative">
+                           <div class="h-48 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCs2qSuzeiaD78_l2bfsJYva_jWabdo2hgrBKIAgOjhx7LBpwnLMqxqFIAK9thR-09dEYD_flmpnsRKnjDuN8R3C-Zk1pFASvFEyhwdqzyOqv121ykXMNGG8Sc006xRuEmJkipbANepv1yQmrBCoPpAxdXJtp-NLShxg4ZSrZun_yfWtffDStAxxevYmalYYSxmnpLMIlI7x8IQso3OX7lmqK4u1OBq91m-CLFdkB-G7qp1R8ZT4Xr34V_tVN7nuyfZwLf5vXd7XWOb");'></div>
+                           <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
+                              <h3 class="text-white text-lg font-bold">Encuentro de Fans de Star Wars</h3>
+                           </div>
+                        </div>
+                        <div class="p-4">
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-2">
+                              <span class="material-symbols-outlined text-base mr-2"> calendar_today </span>
+                              <p>Sábado, 5 de Agosto, 4:00 PM</p>
+                           </div>
+                           <div class="flex items-center text-sm text-[var(--text-secondary)] mb-4">
+                              <span class="material-symbols-outlined text-base mr-2"> location_on </span>
+                              <p>Planetario Galileo Galilei, Buenos Aires</p>
+                           </div>
+                           <div class="flex items-center gap-2">
+                              <span class="text-xs font-semibold bg-gray-200 text-gray-800 px-2 py-1 rounded-full">Sci-Fi</span>
+                              <span class="text-xs font-semibold bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Cosplay</span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <section>
+                  <button class="px-6 py-2 rounded-full bg-violet-400 text-white font-semibold shadow-md cursor-default">
+  📍 Eventos Cerca Tuyo
+</button>
+                  <div class="w-full h-[500px] rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                     <iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105073.2342417757!2d-58.46124584208983!3d-34.61582245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA%2C%20Argentina!5e0!3m2!1ses-419!2sus!4v1700681315802!5m2!1ses-419!2sus" style="border:0;" width="100%"></iframe>
+                  </div>
+               </section>
+            </main>
+         </div>
+      </div>
+   </body>
+</html>
